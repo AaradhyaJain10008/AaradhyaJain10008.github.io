@@ -1,92 +1,86 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Aaradhya Jain", //
+  title: "Business Analyst", //
+  description: "Portfolio website of Aaradhya Jain", 
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "aj3265@drexel.edu", //
+    linkedin: "https://linkedin.com/in/aaradhyajain108", //
+    twitter: "", 
+    github: "https://github.com/AaradhyaJain10008", //
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "Business Analyst with 2+ years of experience in SQL, Python, and Tableau. Developed robust ETL pipelines and interactive dashboards that reduced manual reporting time by 15% and improved data accuracy by 20%. Expert in processing multi-source datasets to drive executive-level decision-making through rigorous statistical validation and trend analysis.", //
+  skills: ["SQL", "Python", "Tableau", "Power BI", "Snowflake", "AWS", "Pandas", "ETL Pipelines"], //
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "Aramark MLB Sales & Operations Dashboard", //
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Analyzed 100k+ records via SQL to identify sales velocity trends and built a real-time Power BI dashboard for onsite managers, reducing stockouts by 15% during peak game-day demand.", //
+      link: "",
+      skills: ["SQL", "Power BI"], //
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "Customer Sentiment & NLP Analysis", //
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Constructed a Python NLP pipeline for 10,000+ reviews and applied tokenization and sentiment scoring algorithms to categorize feedback into 5+ distinct themes for product improvement.", //
+      link: "",
+      skills: ["Python", "NLP", "Pandas"], //
     },
     {
-      name: "ExtensionKit",
+      name: "Supply Chain ROI & Logistics Analysis", //
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Identified 5% cost reduction opportunities by conducting a comparative analysis of logistics routes using Tableau and modeled ROI for delivery tiers using SQL.", //
+      link: "",
+      skills: ["Tableau", "SQL", "Excel"], //
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Magadh Tech", //
+      title: "Data Analytics Intern", //
+      dateRange: "Jun 2025 - Aug 2025", //
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Streamlined the processing of 250k+ daily records using Python (Pandas), reducing manual errors by 20% and cutting latency by 60%.", //
+        "Queried Snowflake databases to analyze user engagement for 10+ features, identifying 3 key drivers for the Q3 product roadmap.", //
+        "Designed Tableau dashboards to track DAU and retention, providing leadership visibility into a 12% increase in user activity.", //
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "Dollex Aggrotech Ltd.", //
+      title: "Business Analyst Intern", //
+      dateRange: "Sep 2023 - Aug 2024", //
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
+        "Orchestrated scalable SQL workflows to replace manual Excel reporting, saving 10+ hours per month for operations teams.", //
+        "Developed Power BI dashboards for 500+ SKUs, optimizing stock allocation and reducing holding costs by 8% via trend analysis.", //
+        "Performed root cause analysis on 1,000+ discrepant records using SQL, achieving 99.9% accuracy for financial compliance.", //
       ],
     },
     {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
+      company: "Ai Trillion (GWB IT Solutions Pvt. Ltd.)", //
+      title: "Product Analyst Intern", //
+      dateRange: "Jun 2023 - Aug 2023", //
       bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
+        "Managed API integrations from 5+ e-commerce platforms, ensuring 100% data flow reliability for real-time analytics systems.", //
+        "Translated 15+ business requirements into technical specifications, accelerating feature launch cycles by 10% for engineers.", //
+        "Executed validation checks on third-party streams using Python, identifying 10+ schema issues before system deployment.", //
       ],
     },
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "Drexel University, LeBow College of Business", //
+      degree: "Master of Science in Business Analytics", //
+      dateRange: "Anticipated Jun 2026", //
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+        "GPA: 3.84/4.0", //
       ],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
+      school: "Prestige Institute of Management and Research", //
+      degree: "Bachelor of Computer Applications", //
+      dateRange: "Jun 2024", //
+      achievements: [],
     },
   ],
 };
