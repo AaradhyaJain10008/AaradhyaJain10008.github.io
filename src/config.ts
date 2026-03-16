@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Aaradhya Jain",
-  title: "Business & Data Analyst",
+  title: "Data & Business Analyst",
   description: "Portfolio of Aaradhya Jain - MS in Business Analytics @ Drexel University", 
   accentColor: "#1d4ed8",
   social: {
