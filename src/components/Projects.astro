@@ -5,11 +5,15 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 
 {
   hasProjects && (
-    <section id="projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <section
+      id="projects"
+      class="p-8 sm:p-12 md:p-16 lg:p-24 bg-slate-950 text-slate-50 scroll-mt-24"
+      style={`--accent-color: ${siteConfig.accentColor}`}
+    >
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-slate-50">
               Projects
             </h2>
             <div
@@ -19,82 +23,352 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
           </div>
 
           <div class="lg:col-span-8">
-            <div class="space-y-8">
-              {siteConfig.projects.map((project, index) => {
-                const Component = project.link ? "a" : "div";
-                const linkProps = project.link
-                  ? {
-                      href: project.link,
-                      target: "_blank",
-                      rel: "noopener noreferrer",
-                    }
-                  : {};
+            <div class="space-y-10">
+              <!-- Aramark MLB Sales & Operations Dashboard -->
+              <article class="relative group overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950 p-6 sm:p-8 shadow-lg transition-colors duration-300 group-hover:border-[var(--accent-color)]/50">
+                <div class="absolute inset-y-0 right-0 w-1/3 opacity-20 pointer-events-none">
+                  <svg viewBox="0 0 200 200" class="w-full h-full text-emerald-400/40">
+                    <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="1" />
+                    <circle cx="120" cy="120" r="60" fill="none" stroke="currentColor" stroke-width="1" />
+                    <polyline
+                      points="20,160 60,140 100,150 150,120 180,130"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
 
-                return (
-                  <div class="group relative">
-                    <Component
-                      {...linkProps}
-                      class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
-                        project.link
-                          ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1"
-                          : ""
-                      }`}
-                    >
-                      {project.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
-                          <svg
-                            class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M7 17L17 7M17 7H7M17 7V17"
-                            />
-                          </svg>
-                        </div>
-                      )}
+                <a
+                  href={siteConfig.projects[0]?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Aramark MLB Sales & Operations Dashboard project on GitHub"
+                  class="absolute inset-0 z-30 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 rounded-2xl"
+                ></a>
 
-                      <div class="space-y-4">
-                        <div>
-                          <span
-                            class="text-sm font-mono"
-                            style={{ color: siteConfig.accentColor }}
-                          >
-                            0{index + 1}
-                          </span>
-                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {project.name}
-                          </h3>
-                        </div>
-
-                        <p
-                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
-                        >
-                          {project.description}
-                        </p>
-
-                        {project.skills && project.skills.length > 0 && (
-                          <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
-                            {project.skills.map((skill) => (
-                              <span
-                                class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
-                                  project.link ? "group-hover:bg-gray-800" : ""
-                                }`}
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    </Component>
+                <div class="relative z-20 space-y-4">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-xs font-mono uppercase tracking-[0.25em] text-slate-200">
+                        01 • Case Study
+                      </p>
+                      <h3 class="mt-1 text-2xl sm:text-3xl font-semibold text-slate-50">
+                        Aramark MLB Sales &amp; Operations Dashboard
+                      </h3>
+                    </div>
+                    <div class="shrink-0 rounded-full bg-[var(--accent-color)]/10 px-3 py-1 text-xs sm:text-sm font-semibold text-[var(--accent-color)] border border-[var(--accent-color)]/40">
+                      ↓ 15% stockouts
+                    </div>
                   </div>
-                );
-              })}
+
+                  <p class="text-sm sm:text-base text-slate-100">
+                    Built a Power BI dashboard on top of 100k+ concession sales records across 10 ballpark locations, giving onsite
+                    managers a live view of velocity, inventory, and profitability.
+                  </p>
+
+                  <div class="grid gap-4 sm:grid-cols-3 text-sm sm:text-base text-slate-200">
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Problem
+                      </h4>
+                      <p>
+                        Frequent stockouts and inventory bottlenecks during peak game‑day demand across multiple stadiums.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Approach
+                      </h4>
+                      <p>
+                        Analyzed 100k+ records in SQL, then modeled item‑level profitability and historical performance in Power BI
+                        using custom DAX measures.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Impact
+                      </h4>
+                      <p>
+                        Reduced stockouts by <span class="font-semibold text-[var(--accent-color)]">15%</span> during peak games and
+                        gave managers a single source of truth for real‑time inventory decisions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap items-center gap-2">
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      SQL
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      Power BI (DAX)
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      Sales Analytics
+                    </span>
+                  </div>
+
+                </div>
+              </article>
+
+              <!-- Customer Sentiment & NLP Analysis -->
+              <article class="relative group overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950 p-6 sm:p-8 shadow-lg transition-colors duration-300 group-hover:border-[var(--accent-color)]/50">
+                <div class="absolute inset-y-0 right-0 w-1/3 opacity-20 pointer-events-none">
+                  <svg viewBox="0 0 200 200" class="w-full h-full text-emerald-300/40">
+                    <rect x="20" y="20" width="40" height="80" fill="none" stroke="currentColor" stroke-width="1" />
+                    <rect x="80" y="40" width="40" height="60" fill="none" stroke="currentColor" stroke-width="1" />
+                    <rect x="140" y="30" width="30" height="90" fill="none" stroke="currentColor" stroke-width="1" />
+                    <polyline
+                      points="20,140 60,120 100,135 140,110 180,120"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                  </svg>
+                </div>
+
+                <a
+                  href={siteConfig.projects[1]?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Customer Sentiment & NLP Analysis project on GitHub"
+                  class="absolute inset-0 z-30 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 rounded-2xl"
+                ></a>
+
+                <div class="relative z-20 space-y-4">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-xs font-mono uppercase tracking-[0.25em] text-slate-200">
+                        02 • Case Study
+                      </p>
+                      <h3 class="mt-1 text-2xl sm:text-3xl font-semibold text-slate-50">
+                        Customer Sentiment &amp; NLP Analysis
+                      </h3>
+                    </div>
+                    <div class="shrink-0 rounded-full bg-[var(--accent-color)]/10 px-3 py-1 text-xs sm:text-sm font-semibold text-[var(--accent-color)] border border-[var(--accent-color)]/40">
+                      12% shipping correlation
+                    </div>
+                  </div>
+
+                  <p class="text-sm sm:text-base text-slate-100">
+                    Built an NLP pipeline over 10,000+ customer reviews to uncover themes, sentiment drivers, and the relationship
+                    between shipping delays and negative ratings.
+                  </p>
+
+                  <div class="grid gap-4 sm:grid-cols-3 text-sm sm:text-base text-slate-200">
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Problem
+                      </h4>
+                      <p>
+                        Product and operations teams lacked structured insight into why customers churned or left negative feedback.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Approach
+                      </h4>
+                      <p>
+                        Used Python, NLTK/TextBlob, and Pandas to tokenize, score sentiment, and cluster feedback into themes with
+                        reproducible notebooks.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Impact
+                      </h4>
+                      <p>
+                        Uncovered a <span class="font-semibold text-[var(--accent-color)]">12% correlation</span> between shipping
+                        delays and negative ratings, and cut stakeholder prep time by{" "}
+                        <span class="font-semibold text-[var(--accent-color)]">80%</span> with automated reporting.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap items-center gap-2">
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      Python
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      NLP
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      Sentiment Analysis
+                    </span>
+                  </div>
+
+                </div>
+              </article>
+
+              <!-- Supply Chain ROI & Logistics Analysis -->
+              <article class="relative group overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950 p-6 sm:p-8 shadow-lg transition-colors duration-300 group-hover:border-[var(--accent-color)]/50">
+                <div class="absolute inset-y-0 right-0 w-1/3 opacity-20 pointer-events-none">
+                  <svg viewBox="0 0 200 200" class="w-full h-full text-emerald-300/35">
+                    <path
+                      d="M20 160 C 50 120, 80 140, 110 110 C 140 80, 160 90, 180 70"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.2"
+                    />
+                    <circle cx="40" cy="150" r="4" fill="currentColor" />
+                    <circle cx="90" cy="130" r="4" fill="currentColor" />
+                    <circle cx="130" cy="105" r="4" fill="currentColor" />
+                    <circle cx="170" cy="80" r="4" fill="currentColor" />
+                  </svg>
+                </div>
+
+                <a
+                  href={siteConfig.projects[2]?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Supply Chain ROI & Logistics Analysis project on GitHub"
+                  class="absolute inset-0 z-30 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 rounded-2xl"
+                ></a>
+
+                <div class="relative z-20 space-y-4">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-xs font-mono uppercase tracking-[0.25em] text-slate-200">
+                        03 • Case Study
+                      </p>
+                      <h3 class="mt-1 text-2xl sm:text-3xl font-semibold text-slate-50">
+                        Supply Chain ROI &amp; Logistics Analysis
+                      </h3>
+                    </div>
+                    <div class="shrink-0 rounded-full bg-[var(--accent-color)]/10 px-3 py-1 text-xs sm:text-sm font-semibold text-[var(--accent-color)] border border-[var(--accent-color)]/40">
+                      5% cost reduction
+                    </div>
+                  </div>
+
+                  <p class="text-sm sm:text-base text-slate-100">
+                    Evaluated logistics routes and shipping tiers using Tableau and SQL to identify cost‑savings while maintaining
+                    service levels.
+                  </p>
+
+                  <div class="grid gap-4 sm:grid-cols-3 text-sm sm:text-base text-slate-200">
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Problem
+                      </h4>
+                      <p>
+                        Rising transportation spend with limited visibility into which lanes, tiers, or routes were driving costs.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Approach
+                      </h4>
+                      <p>
+                        Modeled delivery tiers in SQL and built Tableau views comparing ROI, lane‑level performance, and route
+                        efficiency.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-100 uppercase">
+                        Impact
+                      </h4>
+                      <p>
+                        Identified <span class="font-semibold text-[var(--accent-color)]">5% cost reduction</span> opportunities and
+                        gave stakeholders clear options for optimizing shipping strategies.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap items-center gap-2">
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      Tableau
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      SQL
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-50">
+                      Supply Chain Analytics
+                    </span>
+                  </div>
+
+                </div>
+              </article>
+
+              <!-- Drexel Co-op Program Operations Dashboard -->
+              <article class="relative group overflow-hidden rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-slate-950 p-6 sm:p-8 shadow-lg transition-colors duration-300 group-hover:border-[var(--accent-color)]/50">
+                <div class="absolute inset-y-0 right-0 w-1/3 opacity-20 pointer-events-none">
+                  <svg viewBox="0 0 200 200" class="w-full h-full text-emerald-200/35">
+                    <rect x="20" y="40" width="30" height="60" fill="none" stroke="currentColor" stroke-width="1" />
+                    <rect x="60" y="30" width="30" height="90" fill="none" stroke="currentColor" stroke-width="1" />
+                    <rect x="100" y="50" width="30" height="70" fill="none" stroke="currentColor" stroke-width="1" />
+                    <rect x="140" y="20" width="30" height="100" fill="none" stroke="currentColor" stroke-width="1" />
+                  </svg>
+                </div>
+
+                <a
+                  href={siteConfig.projects[3]?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open Drexel Co-op Program Operations Dashboard project on GitHub"
+                  class="absolute inset-0 z-30 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-color)] focus-visible:ring-offset-2 rounded-2xl"
+                ></a>
+
+                <div class="relative z-20 space-y-4">
+                  <div class="flex items-center justify-between gap-4">
+                    <div>
+                      <p class="text-xs font-mono uppercase tracking-[0.25em] text-slate-400">
+                        04 • Case Study
+                      </p>
+                      <h3 class="mt-1 text-2xl sm:text-3xl font-semibold text-slate-50">
+                        Drexel Co-op Program Operations Dashboard
+                      </h3>
+                    </div>
+                  </div>
+
+                  <p class="text-sm sm:text-base text-slate-300">
+                    Built an operations dashboard to help Drexel&apos;s co‑op program teams better understand student participation
+                    and placement outcomes.
+                  </p>
+
+                  <div class="grid gap-4 sm:grid-cols-3 text-sm sm:text-base text-slate-300">
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-400 uppercase">
+                        Problem
+                      </h4>
+                      <p>
+                        Manual, ad‑hoc reporting on 1,500+ entries made it difficult to track trends and answer questions from
+                        program directors.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-400 uppercase">
+                        Approach
+                      </h4>
+                      <p>
+                        Architected a Python and SQL pipeline to clean and standardize 50+ attributes, then surfaced KPIs in an
+                        automated dashboard.
+                      </p>
+                    </div>
+                    <div class="space-y-1">
+                      <h4 class="text-xs font-semibold tracking-[0.2em] text-slate-400 uppercase">
+                        Impact
+                      </h4>
+                      <p>
+                        Gave stakeholders a reliable, always‑up‑to‑date view of co‑op engagement and placement trends, reducing
+                        manual reporting work.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-2 flex flex-wrap items-center gap-2">
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-100">
+                      Python
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-100">
+                      SQL
+                    </span>
+                    <span class="rounded-full bg-slate-800 px-3 py-1 text-xs font-medium text-slate-100">
+                      Operations Analytics
+                    </span>
+                  </div>
+
+                </div>
+              </article>
             </div>
           </div>
         </div>

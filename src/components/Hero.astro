@@ -4,18 +4,18 @@ import { siteConfig } from "../config";
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  class="relative isolate overflow-hidden bg-slate-950 text-slate-50 py-24 md:h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
   <!-- Gradient overlay -->
   <div
     class="absolute inset-0 -z-10"
-    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}40 0%, ${siteConfig.accentColor}25 20%, ${siteConfig.accentColor}10 40%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.8) 90%, white 100%)`}
+    style={`background: radial-gradient(ellipse 800px 1200px at 0% 0%, ${siteConfig.accentColor}55 0%, ${siteConfig.accentColor}35 25%, ${siteConfig.accentColor}15 45%, rgba(15, 23, 42, 0.9) 70%, rgba(15, 23, 42, 1) 100%)`}
   >
   </div>
   <svg
     aria-hidden="true"
-    class="absolute inset-0 -z-10 size-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    class="absolute inset-0 -z-10 size-full stroke-slate-800 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
   >
     <defs>
       <pattern
@@ -122,36 +122,130 @@ import { siteConfig } from "../config";
       fill="url(#programming-symbols)"
       width="100%"
       height="100%"
-      opacity="0.2"></rect>
+      opacity="0.18"></rect>
     <rect
       fill="url(#0787a7c5-978c-4f66-83c7-11c213f99cb7)"
       width="100%"
       height="100%"
-      stroke-width={0}></rect>
+      stroke-width={0}
+      opacity="0.25"></rect>
   </svg>
-  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
-    <div>
+  <div class="h-full mx-auto px-8 sm:px-12 md:px-24 py-12 flex flex-col md:flex-row items-center md:items-center gap-10 md:gap-16">
+    <div class="flex-1 max-w-2xl relative z-20">
       <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
+        class="text-pretty text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-slate-200 animate-fade-in"
       >
-        Hello! 👋
+        Hi, I'm <span class="inline-flex items-center gap-2"
+          ><span class="text-2xl md:text-3xl">👋</span>
+          <span>{siteConfig.name}</span></span
+        >
       </h2>
       <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
+        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-50 animate-fade-in animation-delay-200"
       >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
-        >
+        Data &amp; Business Analytics
       </h1>
       <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
+        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-slate-200 max-w-xl animate-fade-in animation-delay-400"
       >
-        {siteConfig.title}
+        Focused on scalable data pipelines and clean reporting. I use <span class="font-semibold text-slate-50">Python, SQL, Power BI, and Tableau</span> to turn multi-source data into dashboards that drive strategic business decisions.
       </p>
+
+      <div class="mt-6 sm:mt-8 flex flex-wrap items-center gap-4 animate-fade-in animation-delay-600">
+        {
+          siteConfig.social?.linkedin && (
+            <a
+              href={siteConfig.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[var(--accent-color)] px-5 py-2.5 text-sm sm:text-base font-semibold text-slate-900 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-400/50 transition duration-200"
+            >
+              <span>Connect on LinkedIn</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M8 11v5" />
+                <path d="M8 8v.01" />
+                <path d="M12 16v-5" />
+                <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+              </svg>
+            </a>
+          )
+        }
+        {
+          siteConfig.social?.email && (
+            <a
+              href={`mailto:${siteConfig.social.email}`}
+              class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-600 px-5 py-2.5 text-sm sm:text-base font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-400 transition duration-200"
+            >
+              <span>Email</span>
+            </a>
+          )
+        }
+        <a
+          href="/Aaradhya_Jain_Data_Analyst.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-slate-600 px-5 py-2.5 text-sm sm:text-base font-medium text-slate-200 hover:bg-slate-900/70 hover:border-slate-400 transition duration-200"
+        >
+          <span>Download Resume</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 12l3 3l3 -3" />
+            <path d="M12 3v12" />
+            <path d="M6 21h12" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex-1 flex justify-center md:justify-end">
+      <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full bg-slate-900/70 border border-slate-700 shadow-2xl shadow-slate-900/60 overflow-hidden flex items-center justify-center">
+        {
+          siteConfig.avatarUrl ? (
+            <img
+              src={siteConfig.avatarUrl}
+              alt={siteConfig.name}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <span class="text-4xl sm:text-5xl md:text-6xl font-semibold text-slate-100">
+              {siteConfig.name
+                .split(" ")
+                .map((part) => part[0])
+                .join("")}
+            </span>
+          )
+        }
+
+        <div class="pointer-events-none absolute inset-0 rounded-full ring-2 ring-[var(--accent-color)]/70 ring-offset-4 ring-offset-slate-950"></div>
+      </div>
     </div>
   </div>
+
   <div
-    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
+    class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-slate-300 animate-fade-in animation-delay-600"
   >
     {
       siteConfig.social?.email && (

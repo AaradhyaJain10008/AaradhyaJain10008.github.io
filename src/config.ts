@@ -1,8 +1,9 @@
 export const siteConfig = {
   name: "Aaradhya Jain",
-  title: "Data & Business Analyst",
-  description: "Portfolio of Aaradhya Jain - MS in Business Analytics @ Drexel University", 
-  accentColor: "#1d4ed8",
+  title: "Data & Business Analytics",
+  description: "Portfolio of Aaradhya Jain - Data & Business Analytics professional focused on turning real-world data into clear, measurable business impact.",
+  accentColor: "#00e676",
+  avatarUrl: "/aaradhya-profile.jpg",
   social: {
     email: "aj3265@drexel.edu",
     linkedin: "https://linkedin.com/in/aaradhyajain108",
@@ -10,19 +11,21 @@ export const siteConfig = {
     github: "https://github.com/AaradhyaJain10008",
   },
   aboutMe:
-    "MS in Business Analytics candidate at Drexel University with a background in Computer Applications. I specialize in transforming complex datasets into actionable business insights using SQL, Python, and Tableau. With experience ranging from retail sales optimization to NLP-driven sentiment analysis, I am passionate about leveraging data-driven storytelling to drive executive-level decision-making and operational efficiency.",
+    "I approach data analytics as strategic problem‑solving. Whether I am analyzing 100k+ rows to untangle inventory bottlenecks across MLB ballparks or cleaning multi‑source operational data for executives, my goal is always the same: translate complex patterns into simple, actionable decisions. With 2+ years of experience across analytics internships and an MS in Business Analytics at Drexel University, I focus on building reliable data pipelines, clear dashboards, and metric‑driven stories that business teams can trust.",
   skills: [
-    "SQL", 
-    "Python", 
-    "Tableau", 
-    "Power BI", 
-    "R", 
-    "Snowflake", 
-    "AWS", 
-    "Pandas/NumPy", 
-    "ETL Pipelines", 
-    "Statistical Modeling",
-    "A/B Testing"
+    "SQL",
+    "Python (Pandas, NumPy)",
+    "Tableau",
+    "Power BI",
+    "Snowflake",
+    "AWS (S3)",
+    "ETL Pipelines",
+    "Data Cleaning",
+    "API Integrations",
+    "Exploratory Data Analysis",
+    "Root Cause Analysis",
+    "KPI Definition",
+    "Git & GitHub"
   ],
   projects: [
     {
@@ -53,9 +56,9 @@ export const siteConfig = {
       title: "Data Analytics Intern",
       dateRange: "Jun 2025 - Aug 2025",
       bullets: [
-        "Streamlined the processing of 250k+ daily records using Python (Pandas), reducing manual errors by 20% and cutting latency by 60%.",
-        "Queried Snowflake databases to analyze user engagement for 10+ features, identifying key drivers for the product roadmap.",
-        "Designed Tableau dashboards to track DAU and retention, providing leadership visibility into a 12% increase in user activity.",
+        "Streamlined the processing of 250k+ daily records using Python (Pandas), reducing manual errors by 20% and cutting latency by 60%",
+        "Queried Snowflake databases to analyze user engagement for 10+ features, identifying key drivers for the product roadmap",
+        "Designed Tableau dashboards to track DAU and retention, providing leadership visibility into a 12% increase in user activity",
       ],
     },
     {
@@ -63,9 +66,9 @@ export const siteConfig = {
       title: "Business Analyst Intern",
       dateRange: "Sep 2023 - Aug 2024",
       bullets: [
-        "Orchestrated scalable SQL workflows to replace manual Excel reporting, saving 10+ hours per month for operations teams.",
-        "Developed Power BI dashboards for 500+ SKUs, optimizing stock allocation and reducing holding costs by 8%.",
-        "Performed root cause analysis on 1,000+ discrepant records using SQL, achieving 99.9% accuracy for financial compliance.",
+        "Orchestrated scalable SQL workflows to replace manual Excel reporting, saving 10+ hours per month for operations teams",
+        "Developed Power BI dashboards for 500+ SKUs, optimizing stock allocation and reducing holding costs by 8%",
+        "Performed root cause analysis on 1,000+ discrepant records using SQL, achieving 99.9% accuracy for financial compliance",
       ],
     },
     {
@@ -73,9 +76,9 @@ export const siteConfig = {
       title: "Product Analyst Intern",
       dateRange: "Jun 2023 - Aug 2023",
       bullets: [
-        "Managed API integrations from 5+ e-commerce platforms, ensuring 100% data flow reliability for real-time analytics.",
-        "Translated business requirements into technical specifications, accelerating feature launch cycles by 10%.",
-        "Executed validation checks on third-party streams using Python, identifying schema issues before system deployment.",
+        "Managed API integrations from 5+ e-commerce platforms, ensuring 100% data flow reliability for real-time analytics",
+        "Translated business requirements into technical specifications, accelerating feature launch cycles by 10%",
+        "Executed validation checks on third-party streams using Python, identifying schema issues before system deployment",
       ],
     },
   ],

@@ -2,12 +2,16 @@
 import { siteConfig } from "../config";
 ---
 
-<section id="about" class="p-8 sm:p-12 md:p-16 lg:p-24">
+<section
+  id="about"
+  class="p-8 sm:p-12 md:p-16 lg:p-24 bg-slate-950 text-slate-50 scroll-mt-24"
+  style={`--accent-color: ${siteConfig.accentColor}`}
+>
   <div>
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
       <div class="lg:col-span-4">
         <h2
-          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
+          class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-slate-50"
         >
           About Me
         </h2>
@@ -19,19 +23,83 @@ import { siteConfig } from "../config";
       </div>
 
       <div class="lg:col-span-8 space-y-8">
-        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600">
+        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-slate-300">
           {siteConfig.aboutMe}
         </p>
 
-        <div class="pt-4">
-          <div class="flex flex-wrap gap-3">
-            {
-              siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
-                  {skill}
-                </span>
-              ))
-            }
+        <div class="pt-6 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 flex flex-col gap-3">
+            <h3 class="text-sm sm:text-base font-semibold text-slate-50 uppercase tracking-[0.18em]">
+              Data Querying &amp; Processing
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                SQL
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Python
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Pandas
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                NumPy
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Advanced joins, CTEs, window functions, and vectorized pipelines to run root‑cause analysis on high‑volume datasets.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 flex flex-col gap-3">
+            <h3 class="text-sm sm:text-base font-semibold text-slate-50 uppercase tracking-[0.18em]">
+              Visualization &amp; BI
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Tableau
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Power BI
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Excel
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Looker Studio
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Build interactive dashboards with LOD expressions and DAX to track DAU, profitability, and inventory, making trends
+              legible at a glance.
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5 flex flex-col gap-3">
+            <h3 class="text-sm sm:text-base font-semibold text-slate-50 uppercase tracking-[0.18em]">
+              Data Engineering &amp; Tools
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Snowflake
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                AWS (S3)
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                ETL Pipelines
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                API Integrations
+              </span>
+              <span class="rounded-full border border-[var(--accent-color)]/40 bg-slate-900/40 px-3 py-1 text-xs sm:text-sm font-medium text-[var(--accent-color)] hover:bg-slate-900/60 transition-colors">
+                Git &amp; GitHub
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300">
+              Automate ingestion and cleaning for multi‑source data, standardizing 50+ attributes with validation rules so reports
+              stay accurate over time.
+            </p>
           </div>
         </div>
       </div>
